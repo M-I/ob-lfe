@@ -48,7 +48,7 @@
        (mapconcat 'identity (nthcdr (+ 1 num-lines) (ob-lfe-trim-eoe result)) "")))))
 
 (defun ob-lfe-trim-eoe (lines)
-  (while (not (string-match "^> \"org-babel-lfe-eoe\"" (car (last lines))))
+  (while (not (string-match "^lfe> \"org-babel-lfe-eoe\"" (car (last lines))))
     (setq lines (butlast lines)))
   (butlast lines))
 
